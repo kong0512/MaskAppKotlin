@@ -40,9 +40,9 @@ dependencies {
         @ColumnInfo(name = "last_name") val lastName: String?
   )
 ```
-3. DAO 작성. 인터페이스를 하나 만든 뒤 이 안에 CRUD에 필요한 메소드를 만들고 해당 메소드에 @Query, @Insert, @Delete 등을 단 뒤, 인터페이스에 @Dao 어노테이션을 달면 됨. 개발자가 데이터를 DB에 입출력하려면 이 Dao 인터페이스를 사용.
+3. DAO 작성. 인터페이스를 하나 만든 뒤 이 안에 CRUD에 필요한 메소드를 만들고 해당 메소드에 @Query, @Insert, @Delete 등을 단 뒤, 인터페이스에 @Dao 어노테이션을 달면 됨. 개발자가 데이터를 DB에 입출력하려면 이 Dao 인터페이스를 사용. Insert나 Delete는 별도의 어노테이션이 있지만, 기본적인 SELECT 쿼리는 Query에서 따로 해줘야 함.
 ```
- @Dao
+    @Dao
     interface UserDao {
         @Query("SELECT * FROM user")
         fun getAll(): List<User>
