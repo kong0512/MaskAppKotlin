@@ -85,6 +85,13 @@ db.userDao().insertAll(user)
 
  - Model-View-ViewModel 아키텍처의 준말로, Model(데이터 부분)과 View(UI 부분)을 ViewModel이라는 컴포넌트가 매개체 역할을 함.
  - ViewModel에서 대부분의 비즈니스 로직을 처리하며, View는 ViewModel과 데이터 바인딩으로 연결되어 ViewModel에서 특정 데이터가 변경되면 View로 바로 변경됨.
- - Android에서의 ViewModel의 장점 중 하나는, Lifecycle 문제로 인해 폰의 화면을 가로/세로로 전환할 때 UI 내부의 데이터가 사라지는 것을 대비하지 않아도 되는 점이 있음.
 
+#### LiveData
 #### ViewModel
+#### DataBinding
+
+### Coroutine
+
+### Retrofit2
+
+### Dependency Injection
